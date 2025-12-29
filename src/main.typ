@@ -1,7 +1,7 @@
 #import "info.typ": *
 
 #let lang = "en"// "pl" or "en"
-#let consent_side = "left" // "left" or "right"
+#let consent_side = "right" // "left" or "right"
 
 #set document(title: "CV", author: "Adrian Herda")
 #set page(margin: 0em, paper: "a4")
@@ -33,7 +33,7 @@
       // Wyrażam zgodę na przetwarzanie moich danych osobowych zawartych w CV dla potrzeb procesu rekrutacji, zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 (RODO).
     ]))
   } else {
-    par(justify: true, leading: 5pt, first-line-indent: 0pt, text(size: 7pt, [
+    par(justify: true, leading: 5pt, first-line-indent: 0pt, text(size: 8pt, [
       I hereby give consent for my personal data to be processed for the purpose of conducting recruitment for the position for which I am applying.
     ]))
   }
@@ -125,13 +125,6 @@
     - #i
   ]
 
-  #if other_skills != none [
-    = #headeings.other_skills
-    #for i in other_skills [
-      - #i
-    ]
-  ]
-
   #if hard_skills != none [
     = #headeings.hard_skills
     #grid(
@@ -152,6 +145,13 @@
       column-gutter: 7pt,
       ..soft_skills.join()
     )
+  ]
+
+  #if other_skills != none [
+    = #headeings.other_skills
+    #for i in other_skills [
+      - #i
+    ]
   ]
 
   #text(size: 1pt, fill: nocolor, ai_cheat)

@@ -1,6 +1,6 @@
 #let name = [Adrian Herda]
 #let position = [Software Developer]
-#let image_file = "adi-photo.jpg"
+#let image_file = "../assets/adi-photo.jpg"
 
 // contacts
 #let location = "Wrocław, Poland"
@@ -32,11 +32,16 @@
 )
 
 #let hard_skills = none
-#let soft_skills = none
+#let soft_skills = (
+  ([\u{f086}], [Communication]),
+  ([\u{f0c0}], [Teamwork]),
+  ([\u{f52e}], [Problem-solving]),
+  ([\u{f03a}], [Good organizational skills]),
+)
 
 // === Main sections ===
 #let about_me = [
-  I am a graduate in Algorithmic Informatics and currently pursuing a Master’s degree in the same field. I am passionate about exploring the deeper aspects of computer science, which has led me to gain proficiency in multiple programming languages. During my studies, I developed a strong interest in low-level programming, particularly in areas such as optimization, memory management, and safety.
+  I am a graduate in Algorithmic Informatics and currently pursuing a Master's degree in the same field. I am passionate about exploring the deeper aspects of computer science, which has led me to gain proficiency in multiple programming languages. During my studies, I developed a strong interest in low-level programming, particularly in areas such as optimization, memory management, and safety.
 
   I enjoy continuously learning new technologies and approaches, and I adapt quickly to new challenges. I am open-minded, highly communicative, and value collaboration, which allows me to work effectively within a team and build strong professional relationships.
 ]
@@ -83,34 +88,26 @@
 // === Skills ===
 #let skills = [
   #grid(
-    columns: (1fr, 1fr),
-    row-gutter: 15pt,
+    columns: (1fr, auto, auto),
+    row-gutter: (1.4em, 1em),
+    column-gutter: 15pt,
+    // stroke: black,
     [
       == Languages:
-        - *C++* (professional experience)
-        - *Rust* (advanced)
-        - *Python, C, Java* (intermediate)
     ],
     [
-      == Building and Testing:
-        - CMake
-        - Docker
-        - Podman
-        - Nix
+      == Tools & DevOps:
     ],
     [
-      == Version control and collaboration:
-        - Git
-        - SVN
-        - Gerrit
-        - Github
+      == Platform & Workflow:
     ],
-    [
-      == Project environment and issue tracking
-        - Linux
-        - Jira
-        - Trello
-    ]
+    [*C++* (Professional)],
+    [CMake, Nix],
+    [Linux, Git, SVN],
+    [*Rust* (Advanced)],
+    [Docker, Podman],
+    [Gerrit, Jira, Trello],
+    [*Python, C, Java*\ (Intermediate)],
   )
 ]
 
